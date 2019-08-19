@@ -3,7 +3,7 @@ from PIL import Image
 import cv2 as cv
 
 
-img = cv.imread("./123.jpg")
+img = cv.imread("./test.jpg")
 gray_img = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 
 # thresh = cv.adaptiveThreshold(gray_img, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY, 11, 2)
