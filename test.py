@@ -2,7 +2,7 @@ import pytesseract
 from PIL import Image
 import cv2 as cv
 
-
+#git push origin master
 img = cv.imread("./test.jpg")
 gray_img = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 
@@ -22,11 +22,10 @@ img_bilater = cv.bilateralFilter(img,9,75,75)
 
 code = pytesseract.image_to_string(th)
 _mean = pytesseract.image_to_string(img_bilater)
-gray_s = pytesseract.image_to_string(gray_img)
-
+gray_s = pytesseract.image_to_string(img_Guassian)
 
 #cv.imshow("_mean",img_mean)
-cv.imshow("gray_s",gray_img)
+cv.imshow("gray_s",img_Guassian)
 print(gray_s)
 #print(_mean)
 cv.waitKey(0)
