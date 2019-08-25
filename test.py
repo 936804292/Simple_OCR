@@ -2,6 +2,9 @@ import pytesseract
 from PIL import Image
 import cv2 as cv
 
+def Test(*args):
+    print(args)
+
 #git push origin master
 img = cv.imread("./test.jpg")
 gray_img = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
@@ -28,4 +31,5 @@ gray_s = pytesseract.image_to_string(img_Guassian)
 cv.imshow("gray_s",img_Guassian)
 print(gray_s)
 #print(_mean)
+Test("1",2,"qwe")
 cv.waitKey(0)
