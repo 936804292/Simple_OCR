@@ -3,9 +3,7 @@ import numpy as np
 
 def GetZoomIn(srcImg,multp):
     imgs = cv.imread(srcImg,1)
-    imgInfos = imgs.shape
-    height = imgInfos[0]
-    width = imgInfos[1]
+    height,width = imgs.shape[:2]
     destHeight = int(height/multp)
     destWidth = int(width/multp)
     # uint8:limit 0-255
@@ -19,7 +17,6 @@ def GetZoomIn(srcImg,multp):
             destImage[i,j] = imgs[iNew,jNew]
     return destImage
 
-
-cv.imshow('dest',GetZoomIn('nina.png',2))
-cv.imshow('src',GetZoomIn('nina.png',1))
+cv.imshow('dest',GetZoomIn('code.jpeg',2))
+cv.imshow('src',GetZoomIn('code.jpeg',1))
 cv.waitKey(0)
